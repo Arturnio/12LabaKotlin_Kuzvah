@@ -23,4 +23,19 @@ fun main() {
     lab.performAction(manager)
     println()
     manager.printAll()
+
+    val generatorResult = generator.performAction(manager)
+    val labResult = lab.performAction(manager)
+    handleModuleResult(generatorResult)
+    handleModuleResult(labResult)
+    println()
+    manager.printAll()
+}
+fun handleModuleResult(result: ModuleResult) {
+    when (result) {
+        is ModuleResult.Success -> println("Успех ${result.message}")
+        is ModuleResult.ResourceProduced -> println("Произведени ${result.resourceName} ${result.amount}")
+        is ModuleResult.NotEnoughResources -> println("Недоастаточно ресурса ${result.resourceName} Нужно ${result.required} есть ${result.available}")
+        is ModuleResult.Error -> println("Ошибка ${result.reason}")
+    }
 }

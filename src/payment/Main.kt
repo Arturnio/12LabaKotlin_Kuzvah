@@ -20,7 +20,7 @@ fun main() {
     println("Порядковый номер: ${cardType.ordinal}")
     println("Все типы карт: ${CardType.values().joinToString()}")
     val  payment1=Payment("41111111111111",1000,CardType.VISA)
-    val payment2=payment1.copy(type = CardType.MASTERCARD,2000)
+    val payment2=payment1.copy(type = CardType.MASTERCARD)
     println("===Сравнение data class===")
     println("Платеж 1: $payment1")
     println("Платеж 2: $payment2")
@@ -28,4 +28,4 @@ fun main() {
 
 }
 
-}
+
