@@ -14,22 +14,26 @@ fun main() {
 //    val bonus = minerals.copy(amount = minerals.amount + 50)
 //    println("Копия минералов с бонусом $bonus")
 
-    val manager = ResourceManager()
-    manager.add(OutpostResource(id = 1, name = "Minerals", amount = 120))
-    manager.add(OutpostResource(id = 2, name = "Gas", amount = 40))
-    val generator = EnergyGenerator()
-    val lab = ResearchLab()
-    generator.performAction(manager)
-    lab.performAction(manager)
-    println()
-    manager.printAll()
+//    val manager = ResourceManager()
+//    manager.add(OutpostResource(id = 1, name = "Minerals", amount = 120))
+//    manager.add(OutpostResource(id = 2, name = "Gas", amount = 40))
+//    val generator = EnergyGenerator()
+//    val lab = ResearchLab()
+//    generator.performAction(manager)
+//    lab.performAction(manager)
+//    println()
+//    manager.printAll()
+//
+//    val generatorResult = generator.performAction(manager)
+//    val labResult = lab.performAction(manager)
+//    handleModuleResult(generatorResult)
+//    handleModuleResult(labResult)
+//    println()
+//    manager.printAll()
 
-    val generatorResult = generator.performAction(manager)
-    val labResult = lab.performAction(manager)
-    handleModuleResult(generatorResult)
-    handleModuleResult(labResult)
-    println()
-    manager.printAll()
+
+
+
 }
 fun handleModuleResult(result: ModuleResult) {
     when (result) {
